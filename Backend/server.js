@@ -24,7 +24,7 @@ app.post('/chatbot', async (req, res) => {
         conversationId: session
       }
     })
-    console.log(message)
+    console.log("prompt: " + message + " | response: " + response.data.data.response)
     res.json(response.data.data.response)
   } catch (error) {
     res.status(500).json({ error: error.message })
